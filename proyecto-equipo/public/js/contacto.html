@@ -1,0 +1,26 @@
+<section id="contacto">
+    <form id="form">
+        <div class="field">
+            <label for="to_name">Nombre del destinatario (to_name)</label>
+            <input type="text" name="to_name" id="to_name" required>
+        </div>
+        <div class="field">
+            <label for="from_name">Tu nombre (from_name)</label>
+            <input type="text" name="from_name" id="from_name" required>
+        </div>
+        <div class="field">
+            <label for="message">Mensaje</label>
+            <input type="text" name="message" id="message" required>
+        </div>
+        <div class="field">
+            <label for="reply_to">Correo electrónico (reply_to)</label>
+            <input type="email" name="reply_to" id="reply_to" required>
+        </div>
+
+        <input type="submit" id="button" value="Send Email">
+    </form>
+
+    <!-- Incluye la biblioteca de EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</section>
+

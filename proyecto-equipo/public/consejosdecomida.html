@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos de Comida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #c1272d;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1, footer p {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .tip-card {
+            background-color: white;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px #c1272d;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tip-image, .tip-video {
+            width: 50%;
+        }
+
+        .tip-image img, .tip-video video {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .tip-content {
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .tip-title {
+            margin: 0 0 10px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .tip-description {
+            font-size: 1.2em;
+            color: #555;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .tip-info {
+            margin: 15px 0;
+        }
+
+        .tip-info p {
+            font-size: 1em;
+            color: #555;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Consejos de Comida</h1>
+    </header>
+
+    <div class="container">
+
+        <!-- Tarjeta de consejo 1 -->
+        <div class="tip-card">
+            <div class="tip-image">
+                <img src="D:\Programar\proyecto-equipo\public\image\real del monte.jpg" alt="Centro de Real del Monte">
+            </div>
+            <div class="tip-content">
+                <h2 class="tip-title">Centro de Real del Monte - Pastes Tejeda</h2>
+                <p class="tip-description">
+                    Disfruta de los auténticos pastes en Real del Monte, un lugar lleno de historia minera y sabores únicos. 
+                </p>
+                <div class="tip-info">
+                    <p><strong>Tiempo de llegada:</strong> 1 hora desde el centro de Pachuca.</p>
+                    <p><strong>¿Qué hacer?</strong> Pasea por el centro histórico, visita el Museo de Minería.</p>
+                    <p><strong>¿Qué comer?</strong> Prueba los pastes tradicionales y los de sabores innovadores como mole o champiñones.</p>
+                    <p><strong>Costo aproximado:</strong> $200 MXN por persona.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de consejo 2 -->
+        <div class="tip-card">
+            <div class="tip-image">
+                <img src="D:\Programar\proyecto-equipo\public\image\barbacoa.jpg" alt="Barbacoa Tradicional">
+            </div>
+            <div class="tip-content">
+                <h2 class="tip-title">Actopan - Barbacoa Tradicional</h2>
+                <p class="tip-description">
+                    Experimenta la auténtica barbacoa de Hidalgo en Actopan, conocida por su sabor ahumado único y sus tradiciones culinarias.
+                </p>
+                <div class="tip-info">
+                    <p><strong>Tiempo de llegada:</strong> 1.5 horas desde el centro de Pachuca.</p>
+                    <p><strong>¿Qué hacer?</strong> Visita el convento de San Nicolás Tolentino y explora los mercados locales.</p>
+                    <p><strong>¿Qué comer?</strong> Barbacoa tradicional de horno, acompañada de consomé y tortillas recién hechas.</p>
+                    <p><strong>Costo aproximado:</strong> $250 MXN por persona.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de consejo 3 -->
+        <div class="tip-card">
+            <div class="tip-image">
+                <img src="D:\Programar\proyecto-equipo\public\image\pastor.jpg" alt="Tacos al Pastor">
+            </div>
+            <div class="tip-content">
+                <h2 class="tip-title">Ciudad de México - Tacos al Pastor</h2>
+                <p class="tip-description">
+                    Los tacos al pastor son un emblema culinario de la Ciudad de México, con un sabor único que combina especias mexicanas y herencia libanesa.
+                </p>
+                <div class="tip-info">
+                    <p><strong>Tiempo de llegada:</strong> Variable, según la ubicación.</p>
+                    <p><strong>¿Qué hacer?</strong> Recorre taquerías icónicas como El Vilsito o Los Cocuyos.</p>
+                    <p><strong>¿Qué comer?</strong> Tacos al pastor servidos con piña, cebolla y cilantro.</p>
+                    <p><strong>Costo aproximado:</strong> $100 MXN por persona.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta de consejo 4 -->
+        <div class="tip-card">
+            <div class="tip-image">
+                <img src="D:\Programar\proyecto-equipo\public\image\pescado.webp" alt="Pescado a la Talla">
+            </div>
+            <div class="tip-content">
+                <h2 class="tip-title">Acapulco - Pescado a la Talla</h2>
+                <p class="tip-description">
+                    Disfruta del emblemático Pescado a la Talla en las playas de Acapulco, una experiencia culinaria única junto al mar.
+                </p>
+                <div class="tip-info">
+                    <p><strong>Tiempo de llegada:</strong> 4 horas desde la CDMX (en auto).</p>
+                    <p><strong>¿Qué hacer?</strong> Relájate en la playa, disfruta de deportes acuáticos y prueba comida fresca.</p>
+                    <p><strong>¿Qué comer?</strong> Pescado marinado con especias y asado al carbón.</p>
+                    <p><strong>Costo aproximado:</strong> $300 MXN por persona.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 Consejos de Comida - Disfruta lo mejor de México</p>
+    </footer>
+
+</body>
+</html>
