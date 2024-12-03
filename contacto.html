@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        .field {
+            margin-bottom: 10px;
+        }
+
+            .field label {
+                display: block;
+                font-size: 12px;
+                color: #777;
+            }
+
+            .field input {
+                display: block;
+                min-width: 250px;
+                line-height: 1.5;
+                font-size: 14px;
+            }
+
+        input[type="submit"] {
+            display: block;
+            padding: 6px 30px;
+            font-size: 14px;
+            background-color: #c1272d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <div class="field">
+            <label for="to_name">Nombre del destinatario (to_name)</label>
+            <input type="text" name="to_name" id="to_name" required>
+        </div>
+        <div class="field">
+            <label for="from_name">Tu nombre (from_name)</label>
+            <input type="text" name="from_name" id="from_name" required>
+        </div>
+        <div class="field">
+            <label for="message">Mensaje</label>
+            <input type="text" name="message" id="message" required>
+        </div>
+        <div class="field">
+            <label for="reply_to">Correo electrónico (reply_to)</label>
+            <input type="email" name="reply_to" id="reply_to" required>
+        </div>
+
+        <input type="submit" id="button" value="Send Email">
+    </form>
+
+    <!-- Incluye la biblioteca de EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        // Inicializa EmailJS con tu User ID
+        emailjs.init('lfGTaAleaMUKt8Nm9');  // Reemplaza '7aiD-Xwy4_Xad4nS6' con tu verdadero User ID
+
+        // Lógica de envío del formulario
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+                btn.value = 'Enviando...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_j8j2aug';
+
+                // Enviar el formulario usando EmailJS
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        alert('¡Correo enviado con éxito!');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert('Error al enviar el correo: ' + JSON.stringify(err));
+                    });
+            });
+    </script>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .contact-container {
+        background: #fff;
+        max-width: 500px;
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px #c1272d;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        text-align: center;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .field {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: #444;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+        outline: none;
+    }
+
+    input:focus, textarea:focus {
+        border-color: #007bff;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        background-color: #c1272d;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color:#c1272d;
+    }
+</style>
